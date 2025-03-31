@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, navy, #000016);
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-family: cursive; */
+}
+.container {
+    position: relative;
+    width: 100%;
+}
+header {
+    position: relative;
+}
+/* --------------------- Header Top Bar ------------------ */
+header .top {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #000016;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top .left {
+    position: relative;
+    color: azure;
+    font-weight: 700;
+    width: 60%;
+}
+.right {
+    position: relative;
+    /* width: 39%; */
+}
+.left i, .right i {
+    color: chartreuse;
+}
+.left a {
+    color: chartreuse;
+}
+.left span {
+    color: #bfbfbf;
+}
+.right span {
+    display: flex;
+    gap: 15px;
+}
+.right span#clipBoard {
+    position: absolute;
+    top: 80px;
+    left: -150px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: rgba(255, 157, 157, 0.288);
+    width: 170px;
+    min-height: 80px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+span#clipBoard span {
+    padding: 3px 8px;
+    color: chartreuse;
+    background: #8a8a8a73;
+    font-size: 14px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+span#clipBoard button {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: grey;
+    background: transparent;
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    border: none;
+    border-top: 1.2px solid #000;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+section h2 {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+section .hobbyBox {
+    position: relative;
+    width: 100%;
+    padding: 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.hobbyBox .box {
+    width: 300px;
+    border-radius: 8px;
+    background: rgb(5, 0, 134);
+    border: 3px solid blue;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0%, 100% {
+        border-color: blue;
+    }
+    25% {
+        border-color: red;
+    }
+    50% {
+        border-color: yellow;
+    }
+    75% {
+        border-color: green;
+    }
+}
+.box .logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+.box img {
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.box .name {
+    position: relative;
+    width: 100%;
+    min-height: 30px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}

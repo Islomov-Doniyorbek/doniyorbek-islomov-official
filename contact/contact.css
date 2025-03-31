@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, navy, #000016);
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-family: cursive; */
+}
+.container {
+    position: relative;
+    width: 100%;
+}
+header {
+    position: relative;
+}
+/* --------------------- Header Top Bar ------------------ */
+header .top {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #000016;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top .left {
+    position: relative;
+    color: azure;
+    font-weight: 700;
+    width: 60%;
+}
+.right {
+    position: relative;
+    /* width: 39%; */
+}
+.left i, .right i {
+    color: chartreuse;
+}
+.left a {
+    color: chartreuse;
+}
+.left span {
+    color: #bfbfbf;
+}
+.right span {
+    display: flex;
+    gap: 15px;
+}
+.right span#clipBoard {
+    position: absolute;
+    top: 80px;
+    left: -150px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: rgba(255, 157, 157, 0.288);
+    width: 170px;
+    min-height: 80px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+span#clipBoard span {
+    padding: 3px 8px;
+    color: chartreuse;
+    background: #8a8a8a73;
+    font-size: 14px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+span#clipBoard button {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: grey;
+    background: transparent;
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    border: none;
+    border-top: 1.2px solid #000;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    margin: 10px 0 20px 0;
+}
+section .contactBox {
+    position: relative;
+    display: grid;
+    padding: 15px 18px;
+    background: rgba(0, 0, 255, 0.162);
+    border-radius: 8px;
+}
+.col, form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+form label {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+label input, textarea {
+    width: 200px;
+    border-radius: 8px;
+    padding: 5px 8px;
+    color: azure;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid azure;
+    font-size: 15px;
+    cursor: pointer;
+}
+label textarea {
+    height: 80px;
+    resize: none;
+}
+form button {
+    width: 200px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    background: transparent;
+    color: azure;
+    outline: none;
+    border: 1.3px solid azure;
+    cursor: pointer;
+}
+.contacts ol {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    list-style: none;
+}
+ol li {
+    color: azure;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 10px 5px;
+    border-bottom: 1.2px solid azure;
+    border-left: 1.2px solid azure;
+}
+ol li i {
+    color: chartreuse;
+    margin: 0 8px;
+}
+
+@media (min-width: 545px){
+    .contactBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 545px){
+    .contactBox {
+        grid-template-columns: repeat(1, 1fr);
+    }    
+}

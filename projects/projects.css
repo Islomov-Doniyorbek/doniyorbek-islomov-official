@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, navy, #000016);
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-family: cursive; */
+}
+.container {
+    position: relative;
+    width: 100%;
+}
+header {
+    position: relative;
+}
+/* --------------------- Header Top Bar ------------------ */
+header .top {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #000016;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top .left {
+    position: relative;
+    color: azure;
+    font-weight: 700;
+    width: 60%;
+}
+.right {
+    position: relative;
+    /* width: 39%; */
+}
+.left i, .right i {
+    color: chartreuse;
+}
+.left a {
+    color: chartreuse;
+}
+.left span {
+    color: #bfbfbf;
+}
+.right span {
+    display: flex;
+    gap: 15px;
+}
+.right span#clipBoard {
+    position: absolute;
+    top: 80px;
+    left: -150px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: rgba(255, 157, 157, 0.288);
+    width: 170px;
+    min-height: 80px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+span#clipBoard span {
+    padding: 3px 8px;
+    color: chartreuse;
+    background: #8a8a8a73;
+    font-size: 14px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+span#clipBoard button {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: grey;
+    background: transparent;
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    border: none;
+    border-top: 1.2px solid #000;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+section h2 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+section .filter {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.filter i {
+    color: azure;
+    font-size: 18px;
+}
+.filter select{
+    padding: 8px 12px; 
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+section .gridBox {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 15px;
+    margin: 10px 0;
+    transition: 0.9s;
+}
+.gridBox .box {
+    position: relative;
+    min-height: 300px;
+    background: #000d846c;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.9s;
+    border: 1.2px inset white;
+}
+.gridBox:hover .box{
+    opacity: 0.35;
+}
+.gridBox .box:hover{
+    opacity: 1;
+}
+.box .logoBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    min-height: 25px;
+    /* text-shadow: 0 0 8px white, 0 0 19px white; */
+}
+.box .technology {
+    color: silver;
+    font-weight: 500;
+    font-style: italic; 
+    height: 20px;   
+}
+.title, .technology {
+    padding-left: 10px;
+    border-left: 1.4px solid white;
+}
+.box .desc {
+    color: aliceblue;
+    min-height: 60px;
+}
+.box .year {
+    color: white;
+}
+.box a {
+    color: white;
+}
+.box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    /* border-radius: 50%; */
+}
+
+@media (min-width: 991px){
+    .gridBox {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media (max-width: 991px){
+    .gridBox {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 801px){
+    .gridBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 586px){
+    .gridBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 400px){
+    .gridBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
